@@ -12023,7 +12023,7 @@ var login = exports.login = /*#__PURE__*/function () {
           _context.next = 3;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://127.0.0.1:3000/api/v1/users/login',
+            url: '/api/v1/users/login',
             data: {
               email: email,
               password: password
@@ -12063,19 +12063,19 @@ var logout = exports.logout = /*#__PURE__*/function () {
           _context2.next = 3;
           return (0, _axios.default)({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/api/v1/users/logout'
+            url: '/api/v1/users/logout'
           });
         case 3:
           res = _context2.sent;
           if (res.data.status = 'success') location.reload(true);
-          _context2.next = 11;
+          _context2.next = 10;
           break;
         case 7:
           _context2.prev = 7;
           _context2.t0 = _context2["catch"](0);
-          console.log(_context2.t0.response);
+          // console.log(err.response);
           (0, _alerts.showAlert)('error', 'Error logging out! Try again.');
-        case 11:
+        case 10:
         case "end":
           return _context2.stop();
       }
@@ -12107,7 +12107,7 @@ var updateSettings = exports.updateSettings = /*#__PURE__*/function () {
       while (1) switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
-          url = type === 'password' ? 'http://127.0.0.1:3000/api/v1/users/updateMyPassword' : 'http://127.0.0.1:3000/api/v1/users/updateMe';
+          url = type === 'password' ? '/api/v1/users/updateMyPassword' : '/api/v1/users/updateMe';
           _context.next = 4;
           return (0, _axios.default)({
             method: 'PATCH',
@@ -12341,7 +12341,7 @@ if (bookBtn) {
   bookBtn.addEventListener('click', function (e) {
     e.target.textContent = 'Processing...';
     var tourId = e.target.dataset.tourId;
-    console.log(tourId);
+    // console.log(tourId);
     bookTour(tourId);
   });
 }
@@ -12370,7 +12370,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43449" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41495" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
