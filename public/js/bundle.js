@@ -6640,9 +6640,15 @@ try {
 }
 
 },{}],"mapbox.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.displayMap = void 0;
 /* eslint-disable */
-exports.displayMap = function (locations) {
-  mapboxgl.accessToken = undefined;
+var displayMap = exports.displayMap = function displayMap(locations) {
+  mapboxgl.accessToken = 'pk.eyJ1Ijoiam9uYXNzY2htZWR0bWFubiIsImEiOiJjam54ZmM5N3gwNjAzM3dtZDNxYTVlMnd2In0.ytpI7V7w7cyT1Kq5rT9Z1A';
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/jonasschmedtmann/cjvi9q8jd04mi1cpgmg7ev3dy',
@@ -12370,7 +12376,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38033" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40925" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
