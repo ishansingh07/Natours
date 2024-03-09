@@ -1,6 +1,6 @@
 /* eslint-disable */
 exports.displayMap = (locations) => {
-  mapboxgl.accessToken = process.env.MAP_ACCESS_TOKEN;
+  mapboxgl.accessToken = 'PlaceHolder';
 
   var map = new mapboxgl.Map({
     container: 'map',
